@@ -16,7 +16,7 @@ export function Features() {
                 <div className="col-lg-3 col-sm-6">
                     <div className="single_features text-center mt-25 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.2s">
                         <div className="features_icon">
-                            <i className="lni lni-certificate"></i>
+                        <i className="fa-solid fa-peace"></i>
                         </div>
                         <div className="features_content">
                             <h4 className="features_title"><a href="#">Paz mental</a></h4>
@@ -27,7 +27,7 @@ export function Features() {
                 <div className="col-lg-3 col-sm-6">
                     <div className="single_features text-center mt-25 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.5s">
                         <div className="features_icon">
-                            <i className="lni lni-rocket"></i>
+                        <i className="fa-solid fa-hand-peace"></i>
                         </div>
                         <div className="features_content">
                             <h4 className="features_title"><a href="#">Tranquilidad</a></h4>
@@ -38,7 +38,7 @@ export function Features() {
                 <div className="col-lg-3 col-sm-6">
                     <div className="single_features text-center mt-25 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.8s">
                         <div className="features_icon">
-                            <i className="lni lni-briefcase"></i>
+                        <i className="fa-solid fa-thumbs-up"></i>
                         </div>
                         <div className="features_content">
                             <h4 className="features_title"><a href="#">Experiencia</a></h4>
@@ -49,7 +49,7 @@ export function Features() {
                 <div className="col-lg-3 col-sm-6">
                     <div className="single_features text-center mt-25 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="1.1s">
                         <div className="features_icon">
-                            <i className="lni lni-headphone-alt"></i>
+                        <i className="fa-solid fa-person-hiking"></i>
                         </div>
                         <div className="features_content">
                             <h4 className="features_title"><a href="#">Dedicación</a></h4>

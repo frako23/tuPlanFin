@@ -1,9 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/style.css";
 
 export const Navbar = () => {
   const [toggler, setToggler] = useState(false);
+  const [active, setActive] = useState({
+    home: false,
+    about: false,
+    services: false,
+    blog: false,
+  });
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -15,15 +21,34 @@ export const Navbar = () => {
     });
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 20) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+  
   return (
     <div className={`header_navbar ${sticky && "sticky"}`}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">
             <nav className="navbar navbar-expand-lg">
-              <a className="navbar-brand" href="index.html">
+              <Link to="/" className="navbar-brand" onClick={scrollToTop}>
                 <img src="" alt="Logo" />
-              </a>
+              </Link>
               <button
                 className={`navbar-toggler ${toggler && "active"}`}
                 type="button"
@@ -36,22 +61,49 @@ export const Navbar = () => {
               </button>
 
               <div
-                className= {`${!toggler && 'collapse'} navbar-collapse sub-menu-bar`}
+                className={`${
+                  !toggler && "collapse"
+                } navbar-collapse sub-menu-bar`}
                 id="navbarSupportedContent"
               >
                 <ul id="nav" className="navbar-nav ml-auto">
-                  <li className="nav-item active">
-                    <a className="page-scroll" href="#home">
+                  <li className={`nav-item ${active.home && "active"}`}>
+                    <a
+                      className="page-scroll"
+                      href="#home"
+                      onClick={() =>
+                        setActive({
+                          home: true,
+                          about: false,
+                          services: false,
+                          blog: false,
+                        })
+                      }
+                    >
                       Inicio
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#about">
+                  <li className={`nav-item ${active.about && "active"}`}>
+                    <a className="page-scroll" href="#about" onClick={() =>
+                        setActive({
+                          home: false,
+                          about: true,
+                          services: false,
+                          blog: false,
+                        })
+                      }>
                       Acerca de mi
                     </a>
                   </li>
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#services">
+                  <li className={`nav-item ${active.services && "active"}`}>
+                    <a className="page-scroll" href="#services" onClick={() =>
+                        setActive({
+                          home: false,
+                          about: false,
+                          services: true,
+                          blog: false,
+                        })
+                      }>
                       Productos Financieros
                     </a>
                   </li>
@@ -64,8 +116,15 @@ export const Navbar = () => {
 								<li className="nav-item">
 									<a className="page-scroll" href="#team">Team</a>
 								</li> */}
-                  <li className="nav-item">
-                    <a className="page-scroll" href="#blog">
+                  <li className={`nav-item ${active.blog && "active"}`}>
+                    <a className="page-scroll" href="#blog" onClick={() =>
+                        setActive({
+                          home: false,
+                          about: false,
+                          services: false,
+                          blog: true,
+                        })
+                      }>
                       Blog
                     </a>
                   </li>

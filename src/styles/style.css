@@ -1155,9 +1155,13 @@ p {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  display: none; }
+   }
   .back-to-top:hover {
     color: #fff;
-    background-color: #0898E7; }
+    background-color: #8eb2c6; }
+
+.display-none {
+  display: none;
+}
 
 /*# sourceMappingURL=style.css.map */
