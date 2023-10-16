@@ -5,10 +5,9 @@ export function Blag() {
     <section id="blog" className="blog_area pt-95 pb-100">
       <div className="container">
         <div className="text-center">
-          <h2>You are using free lite version of Financio</h2>
+          <h2> Deseas trabajar de forma remota ¡Forma parte de mi equipo!</h2>
           <p style={{color: "#333"}}>
-            Please, purchase full version to get all pages, features and
-            permission to remove footer credit
+            Si te interesan las ventas de productos financieros, trabajar de forma remota  manejando tu propio horario contáctame
           </p>
           <a
             className="main-btn"
@@ -18,7 +17,7 @@ export function Blag() {
             tabIndex="0"
             style={{animationDelay: "1s"}}
           >
-            Purchase Now
+            Agenda una cita
           </a>
         </div>
       </div>

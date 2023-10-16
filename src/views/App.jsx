@@ -2,7 +2,7 @@ import { useContext } from "react";
 import "../styles/App.css";
 import { Context } from "../store/appContext";
 import { Slider } from "../components/slider";
-import { Brand } from "../components/brand";
+// import { Brand } from "../components/brand";
 import { Preloader } from "../components/preloader";
 import { Features } from "../components/features";
 import { About } from "../components/about";
@@ -16,7 +16,7 @@ function App() {
     <>
     {/* <Preloader/> */}
       <Slider />
-      <Brand />
+      {/* <Brand /> */}
       <Features />
       <About />
       <Services />
