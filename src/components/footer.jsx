@@ -54,19 +54,19 @@ export const Footer = () => (
                 <h4 className="footer_title">Links de interés</h4>
                 <ul className="link">
                   <li>
-                    <a href="#">Inicio</a>
+                    <a href="#home">Inicio</a>
                   </li>
                   <li>
-                    <a href="#">Acerca de mi</a>
+                    <a href="#about">Acerca de mi</a>
                   </li>
                   <li>
-                    <a href="#">Productos financieros</a>
+                    <a href="#services">Productos financieros</a>
                   </li>
                   {/* <li>
                     <a href="#">Blog</a>
                   </li> */}
                   <li>
-                    <a href="#">Blog</a>
+                    <a href="#blog">Únete a mi equipo</a>
                   </li>
                 </ul>
               </div>

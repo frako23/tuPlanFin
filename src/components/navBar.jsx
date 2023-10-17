@@ -39,6 +39,10 @@ export const Navbar = () => {
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+
+  const myRef = useRef(null)
+
+   const executeScroll = () => myRef.current.scrollIntoView({behavior:"smooth"})    
   
   return (
     <div className={`header_navbar ${sticky && "sticky"}`}>
@@ -84,13 +88,14 @@ export const Navbar = () => {
                     </a>
                   </li>
                   <li className={`nav-item ${active.about && "active"}`}>
-                    <a className="page-scroll" href="#about" onClick={() =>
-                        setActive({
+                    <a  href="#about" onClick={() =>
+                        {setActive({
                           home: false,
                           about: true,
                           services: false,
                           blog: false,
-                        })
+                        });
+                      executeScroll}
                       }>
                       Acerca de mi
                     </a>
@@ -125,7 +130,7 @@ export const Navbar = () => {
                           blog: true,
                         })
                       }>
-                      Blog
+                      Únete a mi equipo
                     </a>
                   </li>
                 </ul>
