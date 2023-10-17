@@ -28,7 +28,7 @@ export function About() {
                         </div> 
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, seawd Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt .</p>
                         
-                        <div className="about_skills pt-15">
+                        {/* <div className="about_skills pt-15">
                             <div className="skill_item mt-20">
                                 <div className="skill_header">
                                     <h6 className="skill_title">Finance</h6>
@@ -81,7 +81,7 @@ export function About() {
                                     </div>
                                 </div>
                             </div> 
-                        </div> 
+                        </div>  */}
                     </div>  
                 </div>
             </div> 

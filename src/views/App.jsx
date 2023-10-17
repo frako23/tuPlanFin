@@ -8,7 +8,7 @@ import { Features } from "../components/features";
 import { About } from "../components/about";
 import { Services } from "../components/services";
 import { Blag } from "../components/blag";
-import "../styles/style.css"
+import "../styles/style.css";
 
 function App() {
   const { store, actions } = useContext(Context);
@@ -17,7 +17,7 @@ function App() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
   useEffect(() => {
@@ -28,8 +28,8 @@ function App() {
         setSticky(false);
       }
     };
-      window.addEventListener("scroll", toggleVisibility);  
-      return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   return (
@@ -41,9 +41,13 @@ function App() {
       <About />
       <Services />
       <Blag />
-      <button  className={sticky ? "back-to-top" : "display-none"} onClick={scrollToTop}>
+      <a
+        style={{ cursor: "pointer", color: "white" }}
+        className={sticky ? "back-to-top" : "display-none"}
+        onClick={scrollToTop}
+      >
         <i className="fa-solid fa-arrow-up"></i>
-      </button>
+      </a>
     </>
   );
 }
