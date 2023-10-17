@@ -13,7 +13,7 @@ export function Services() {
                 </div>
             </div> 
             <div className="row">
-                <div className="col-lg-4 col-sm-6">
+                <div className=" col-sm-6">
                     <div className="single_services text-center mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.2s">
                         <div className="services_icon">
                         <i className="fa-solid fa-person-cane"></i>
@@ -24,7 +24,7 @@ export function Services() {
                         </div>
                     </div> 
                 </div> 
-                <div className="col-lg-4 col-sm-6">
+                <div className=" col-sm-6">
                     <div className="single_services text-center mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.5s">
                         <div className="services_icon">
                         <i className="fa-solid fa-building-columns"></i>
@@ -35,7 +35,7 @@ export function Services() {
                         </div>
                     </div> 
                 </div> 
-                <div className="col-lg-4 col-sm-6">
+                <div className=" col-sm-6">
                     <div className="single_services text-center mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.8s">
                         <div className="services_icon">
                         <i className="fa-solid fa-briefcase"></i>
@@ -46,7 +46,7 @@ export function Services() {
                         </div>
                     </div> 
                 </div> 
-                <div className="col-lg-4 col-sm-6">
+                <div className=" col-sm-6">
                     <div className="single_services text-center mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.2s">
                         <div className="services_icon">
                         <i className="fa-solid fa-hospital"></i>
@@ -57,7 +57,7 @@ export function Services() {
                         </div>
                     </div> 
                 </div> 
-                <div className="col-lg-4 col-sm-6">
+                {/* <div className="col-lg-4 col-sm-6">
                     <div className="single_services text-center mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.5s">
                         <div className="services_icon">
                             <i className="lni lni-investment"></i>
@@ -78,7 +78,7 @@ export function Services() {
                             <p>Lorem ipsum dolor aconsetet dorem ipsum tempor inviduntsadipscing elitr, sed diamn numy eirmod tempor invidunt</p>
                         </div>
                     </div> 
-                </div> 
+                </div>  */}
             </div> 
         </div> 
     </section>

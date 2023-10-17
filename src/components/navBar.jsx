@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+
 import "../styles/style.css";
 
 export const Navbar = () => {
@@ -9,6 +10,7 @@ export const Navbar = () => {
     about: false,
     services: false,
     blog: false,
+    contact: false
   });
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
@@ -40,10 +42,11 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const myRef = useRef(null)
+  const myRef = useRef(null);
 
-   const executeScroll = () => myRef.current.scrollIntoView({behavior:"smooth"})    
-  
+  const executeScroll = () =>
+    myRef.current.scrollIntoView({ behavior: "smooth" });
+
   return (
     <div className={`header_navbar ${sticky && "sticky"}`}>
       <div className="container-fluid">
@@ -72,66 +75,120 @@ export const Navbar = () => {
               >
                 <ul id="nav" className="navbar-nav ml-auto">
                   <li className={`nav-item ${active.home && "active"}`}>
-                    <a
-                      className="page-scroll"
-                      href="#home"
+                    <Link
+                      to="home"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
                       onClick={() =>
                         setActive({
                           home: true,
                           about: false,
                           services: false,
                           blog: false,
+                          contact: false
                         })
                       }
+                      style={{
+                        cursor: "pointer"
+                      }}
                     >
                       Inicio
-                    </a>
+                    </Link>
                   </li>
                   <li className={`nav-item ${active.about && "active"}`}>
-                    <a  href="#about" onClick={() =>
-                        {setActive({
+                    <Link
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      onClick={() => {
+                        setActive({
                           home: false,
                           about: true,
                           services: false,
                           blog: false,
+                          contact: false
                         });
-                      executeScroll}
-                      }>
+                        executeScroll;
+                      }}
+                      style={{
+                        cursor: "pointer"
+                      }}
+                    >
                       Acerca de mi
-                    </a>
+                    </Link>
                   </li>
                   <li className={`nav-item ${active.services && "active"}`}>
-                    <a className="page-scroll" href="#services" onClick={() =>
+                    <Link
+                      to="services"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      onClick={() =>
                         setActive({
                           home: false,
                           about: false,
                           services: true,
                           blog: false,
+                          contact: false
                         })
-                      }>
+                      }
+                      style={{
+                        cursor: "pointer"
+                      }}
+                    >
                       Productos Financieros
-                    </a>
+                    </Link>
                   </li>
-                  {/* <li className="nav-item">
-									<a className="page-scroll" href="#case">Cases</a>
-								</li>
-								<li className="nav-item">
-									<a className="page-scroll" href="#growth">Growth</a>
-								</li>
-								<li className="nav-item">
-									<a className="page-scroll" href="#team">Team</a>
-								</li> */}
                   <li className={`nav-item ${active.blog && "active"}`}>
-                    <a className="page-scroll" href="#blog" onClick={() =>
+                    <Link
+                      to="blog"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      onClick={() =>
                         setActive({
                           home: false,
                           about: false,
                           services: false,
                           blog: true,
+                          contact: false
                         })
-                      }>
+                      }
+                      style={{
+                        cursor: "pointer"
+                      }}
+                    >
                       Únete a mi equipo
-                    </a>
+                    </Link>
+                  </li>
+                  <li className={`nav-item ${active.contact && "active"}`}>
+                    <Link
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      onClick={() =>
+                        setActive({
+                          home: false,
+                          about: false,
+                          services: false,
+                          blog: false,
+                          contact: true
+                        })
+                      }
+                      style={{
+                        cursor: "pointer"
+                      }}
+                    >
+                      Contáctame
+                    </Link>
                   </li>
                 </ul>
               </div>

@@ -1,4 +1,5 @@
 import "../styles/style.css";
+import { Link } from "react-scroll";
 
 export const Footer = () => (
   <footer id="footer" className="footer_area">
@@ -10,9 +11,9 @@ export const Footer = () => (
               <a href="#">
                 <img src="" alt="" />
               </a>
-              <p>
-                Lorem ipsum dolor sitco nsetetu nonumy eirmod tempor invidunt ut
-                labore etert dolore magna uyam Lorem ipsum dolor sitco nsetetu.
+              <p id="contact">
+                Acá te dejo el link a todas mis redes sociales desde donde
+                puedes contactarme.
               </p>
               <ul className="social">
                 <li>
@@ -54,23 +55,56 @@ export const Footer = () => (
                 <h4 className="footer_title">Links de interés</h4>
                 <ul className="link">
                   <li>
-                    <a href="#home">Inicio</a>
+                    <Link
+                      to="home"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      style={{
+                        cursor: "pointer",
+                      }}
+                    >
+                      Inicio
+                    </Link>
                   </li>
                   <li>
-                    <a href="#about">Acerca de mi</a>
+                    <Link to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      style={{
+                        cursor: "pointer",
+                      }}>Acerca de mi</Link>
                   </li>
                   <li>
-                    <a href="#services">Productos financieros</a>
+                    <Link 
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    style={{
+                      cursor: "pointer",
+                    }}>Productos financieros</Link>
                   </li>
                   {/* <li>
                     <a href="#">Blog</a>
                   </li> */}
                   <li>
-                    <a href="#blog">Únete a mi equipo</a>
+                    <Link to="blog"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      style={{
+                        cursor: "pointer",
+                      }}>Únete a mi equipo</Link>
                   </li>
                 </ul>
               </div>
-              <div className="footer_link mt-45">
+              {/* <div className="footer_link mt-45">
                 <h4 className="footer_title">Terms</h4>
                 <ul className="link">
                   <li>
@@ -89,7 +123,7 @@ export const Footer = () => (
                     <a href="#">Policy</a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-4 col-md-6 order-md-2 order-lg-3">
