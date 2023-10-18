@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/imgs/logo.png"
+import logo from "../assets/imgs/logo.jpeg"
 
 import "../styles/style.css";
 
@@ -207,7 +207,7 @@ export const Navbar = () => {
                 <a
                   className="main-btn"
                   data-scroll-nav="0"
-                  href="https://calendly.com/tuplanificadorafinanciera/60min?month=2023-10"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScj_1ewGmWvU_5hHGAZOjz5gePCX_KlU8suBxF9mxTgaILUmA/viewform"
                 >
                   Agenda una cita
                 </a>
