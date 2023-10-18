@@ -194,7 +194,7 @@ export const Navbar = () => {
               </div>
 
               <div className="navbar-btn d-none d-sm-inline-block">
-                <a className="main-btn" data-scroll-nav="0" href="#services">
+                <a className="main-btn" data-scroll-nav="0" href="https://calendly.com/tuplanificadorafinanciera/60min?month=2023-10">
                   Agenda una cita
                 </a>
               </div>

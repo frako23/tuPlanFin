@@ -13,7 +13,7 @@ export function Slider() {
                                     <div className="slider_content">
                                         <h2 className="slider_title" data-animation="fadeInUp" data-delay="0.2s">Obten asosoría financiera profesional</h2>
                                         <p data-animation="fadeInUp" data-delay="0.6s">Logra todas tus metas financieras, a través de herramientas de planificación financiera</p>
-                                        <a className="main-btn" href="https://rebrand.ly/financio-ud" data-animation="fadeInUp" data-delay="1s">Agenda una cita</a>
+                                        <a className="main-btn" href="https://calendly.com/tuplanificadorafinanciera/60min?month=2023-10" data-animation="fadeInUp" data-delay="1s">Agenda una cita</a>
                                     </div> 
                                 </div>
                             </div> 

@@ -11,7 +11,7 @@ export function Blag() {
           </p>
           <a
             className="main-btn"
-            href="https://rebrand.ly/financio-ud"
+            href="https://calendly.com/tuplanificadorafinanciera/60min?month=2023-10"
             data-animation="fadeInUp"
             data-delay="1s"
             tabIndex="0"
