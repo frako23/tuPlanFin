@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/imgs/logo.png";
+import logo from "../assets/imgs/logo.png"
 
 import "../styles/style.css";
 
@@ -60,12 +60,11 @@ export const Navbar = () => {
                 onClick={scrollToTop}
                 style={{
                   display: "flex",
-                  alignItems: "center",
-                  textWrap: "balance",
+                  alignItems: "center"
                 }}
               >
                 <img src={logo} alt="Logo" style={{ height: "3rem" }} />
-                <h4 className="footer_title">Tu Planificadora Financiera</h4>
+                <h4 className="footer_title" style={{textWrap: "balance"}}>Tu Planificadora Financiera</h4>
               </Link>
               <button
                 className={`navbar-toggler ${toggler && "active"}`}

@@ -510,6 +510,9 @@ p {
 
 .navbar-brand {
   padding: 0; }
+  @media (max-width: 425px) {
+    .navbar-brand {
+      width: 13rem; } }
 
 .navbar-toggler {
   padding: 0; }
