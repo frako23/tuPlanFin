@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
+import logo from "../assets/imgs/logo.png";
 
 import "../styles/style.css";
 
@@ -10,7 +11,7 @@ export const Navbar = () => {
     about: false,
     services: false,
     blog: false,
-    contact: false
+    contact: false,
   });
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
@@ -53,8 +54,18 @@ export const Navbar = () => {
         <div className="row">
           <div className="col-lg-12">
             <nav className="navbar navbar-expand-lg">
-              <Link to="/" className="navbar-brand" onClick={scrollToTop}>
-                <img src="" alt="Logo" />
+              <Link
+                to="/"
+                className="navbar-brand"
+                onClick={scrollToTop}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textWrap: "balance",
+                }}
+              >
+                <img src={logo} alt="Logo" style={{ height: "3rem" }} />
+                <h4 className="footer_title">Tu Planificadora Financiera</h4>
               </Link>
               <button
                 className={`navbar-toggler ${toggler && "active"}`}
@@ -87,11 +98,11 @@ export const Navbar = () => {
                           about: false,
                           services: false,
                           blog: false,
-                          contact: false
+                          contact: false,
                         })
                       }
                       style={{
-                        cursor: "pointer"
+                        cursor: "pointer",
                       }}
                     >
                       Inicio
@@ -110,12 +121,12 @@ export const Navbar = () => {
                           about: true,
                           services: false,
                           blog: false,
-                          contact: false
+                          contact: false,
                         });
                         executeScroll;
                       }}
                       style={{
-                        cursor: "pointer"
+                        cursor: "pointer",
                       }}
                     >
                       Acerca de mi
@@ -134,11 +145,11 @@ export const Navbar = () => {
                           about: false,
                           services: true,
                           blog: false,
-                          contact: false
+                          contact: false,
                         })
                       }
                       style={{
-                        cursor: "pointer"
+                        cursor: "pointer",
                       }}
                     >
                       Productos Financieros
@@ -157,11 +168,11 @@ export const Navbar = () => {
                           about: false,
                           services: false,
                           blog: true,
-                          contact: false
+                          contact: false,
                         })
                       }
                       style={{
-                        cursor: "pointer"
+                        cursor: "pointer",
                       }}
                     >
                       Únete a mi equipo
@@ -180,11 +191,11 @@ export const Navbar = () => {
                           about: false,
                           services: false,
                           blog: false,
-                          contact: true
+                          contact: true,
                         })
                       }
                       style={{
-                        cursor: "pointer"
+                        cursor: "pointer",
                       }}
                     >
                       Contáctame
@@ -194,7 +205,11 @@ export const Navbar = () => {
               </div>
 
               <div className="navbar-btn d-none d-sm-inline-block">
-                <a className="main-btn" data-scroll-nav="0" href="https://calendly.com/tuplanificadorafinanciera/60min?month=2023-10">
+                <a
+                  className="main-btn"
+                  data-scroll-nav="0"
+                  href="https://calendly.com/tuplanificadorafinanciera/60min?month=2023-10"
+                >
                   Agenda una cita
                 </a>
               </div>

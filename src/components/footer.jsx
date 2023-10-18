@@ -1,6 +1,6 @@
 import "../styles/style.css";
 import { Link } from "react-scroll";
-
+import logo from "../assets/imgs/logo.png";
 export const Footer = () => (
   <footer id="footer" className="footer_area">
     <div className="container">
@@ -8,9 +8,13 @@ export const Footer = () => (
         <div className="row">
           <div className="col-lg-3 col-md-6 order-md-1 order-lg-1">
             <div className="footer_about mt-50">
-              <a href="#">
-                <img src="" alt="" />
-              </a>
+              <div
+                className="navbar-brand"
+                style={{ display: "flex", alignItems: "center", textWrap:"balance" }}
+              >
+                <img src={logo} alt="Logo" style={{ height: "3rem" }} />
+                <h4 className="footer_title">Tu Planificadora Financiera</h4>
+              </div>
               <p id="contact">
                 Acá te dejo el link a todas mis redes sociales desde donde
                 puedes contactarme.
@@ -69,38 +73,49 @@ export const Footer = () => (
                     </Link>
                   </li>
                   <li>
-                    <Link to="about"
+                    <Link
+                      to="about"
                       spy={true}
                       smooth={true}
                       offset={50}
                       duration={500}
                       style={{
                         cursor: "pointer",
-                      }}>Acerca de mi</Link>
+                      }}
+                    >
+                      Acerca de mi
+                    </Link>
                   </li>
                   <li>
-                    <Link 
-                    to="services"
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    style={{
-                      cursor: "pointer",
-                    }}>Productos financieros</Link>
+                    <Link
+                      to="services"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      style={{
+                        cursor: "pointer",
+                      }}
+                    >
+                      Productos financieros
+                    </Link>
                   </li>
                   {/* <li>
                     <a href="#">Blog</a>
                   </li> */}
                   <li>
-                    <Link to="blog"
+                    <Link
+                      to="blog"
                       spy={true}
                       smooth={true}
                       offset={50}
                       duration={500}
                       style={{
                         cursor: "pointer",
-                      }}>Únete a mi equipo</Link>
+                      }}
+                    >
+                      Únete a mi equipo
+                    </Link>
                   </li>
                 </ul>
               </div>
